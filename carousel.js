@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const carousel = document.querySelector('.carousel-container');
     const slides = document.querySelectorAll('.hero-slide');
     // Suppression des références aux dots, prevButton et nextButton
-    const slideInterval = 10000; // 10 secondes
+    const slideInterval = 30000; // 10 secondes
 
     let currentSlide = 0;
     let autoSlideTimer;
