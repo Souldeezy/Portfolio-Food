@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const prevButton = document.querySelector('.prev-button'); // Ajout
     const nextButton = document.querySelector('.next-button'); // Ajout
     
-    const slideInterval = 40000; // 10 secondes
+    const slideInterval = 100000; // 10 secondes
     let currentSlide = 0;
     let autoSlideTimer;
 

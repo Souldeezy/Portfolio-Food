@@ -2,247 +2,236 @@
 /* ................................................................... */
 
 * {
-    list-style-type: none;
-    text-decoration: none;
-    box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+  box-sizing: border-box;
 }
 
 html {
-    scroll-behavior: smooth;
-
+  scroll-behavior: smooth;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-    font-family: "Lato",sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: "Lato", sans-serif;
 }
 
 main {
-    width: 100%;
-    background: url(.//PICTURES/Logo\ Food\ Portfolio.webp) fixed;
-    background-size: 10%;
-    background-position: center;
-    background-color: rgba(255, 255, 255, 0.975);
-    background-blend-mode: lighten;
-
+  width: 100%;
+  background: url(.//PICTURES/Logo\ Food\ Portfolio.webp) fixed;
+  background-size: 10%;
+  background-position: center;
+  background-color: rgba(255, 255, 255, 0.975);
+  background-blend-mode: lighten;
 }
 
 /* HEADER............................................................. */
 /* ................................................................... */
 
 .site-header {
-    width: 100%;
-    position: fixed;
-    top: 0;
-    z-index: 1000;
-    display: flex;
-    flex-direction: column;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
 }
 
 /* NAV TOP ............................................................*/
 
 .nav-top {
-    height: 110px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 220px 10px 40px;
-    background-color: white;
-    border: 2px solid #890006;
+  height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 220px 10px 40px;
+  background-color: white;
+  border: 2px solid #890006;
 }
 
 .nav-top-logo img {
-    height: 100px;
-    width: 100px;
+  height: 100px;
+  width: 100px;
 }
 
-
 .nav-top-categories ul {
-    display: flex;
-    gap: 60px;
+  display: flex;
+  gap: 60px;
 }
 
 .nav-top-categories ul li a {
-    font-size: 27px;
-    font-family: "Bangers", sans-serif;
-    color: #890006;
-    text-shadow: 0px 0px 2px #ff9da2c8;
+  font-size: 27px;
+  font-family: "Bangers", sans-serif;
+  color: #890006;
+  text-shadow: 0px 0px 2px #ff9da2c8;
 }
 
 .nav-top-categories ul li a:hover {
-    text-decoration: underline;
-    text-decoration-thickness: 2px;
-    text-underline-offset: 4px;
-    transition: 0.2s ease-in-out;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+  transition: 0.2s ease-in-out;
 }
-
-
 
 /* NAV BOTTOM..........................................................*/
 
 .nav-bottom {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100px;
-    background-color: white;
-    gap: 100px;
-    border-bottom: 2px solid #890006;
-    background-color: #890006;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  background-color: white;
+  gap: 100px;
+  border-bottom: 2px solid #890006;
+  background-color: #890006;
 }
 
 .nav-bottom a {
-    color: black;
-    font-size: 17px;
-    background-color: white;
-    font-weight: bold;
-    border: 2px solid #890006;
-    padding: 15px 30px;
-    border-radius: 35px;
-    letter-spacing: 1px;
+  color: black;
+  font-size: 17px;
+  background-color: white;
+  font-weight: bold;
+  border: 2px solid #890006;
+  padding: 15px 30px;
+  border-radius: 35px;
+  letter-spacing: 1px;
 }
 
 .nav-bottom a:hover {
-    transition: 0.2s ease-in;
-    transform: translateY(-10%);
-    box-shadow: 0px 0px 10px 0px white;
+  transition: 0.2s ease-in;
+  transform: translateY(-10%);
+  box-shadow: 0px 0px 10px 0px white;
 }
-
 
 .nav-bottom a i {
-    color: #890006;
-    font-size: 20px;
-    margin-right: 20px;
+  color: #890006;
+  font-size: 20px;
+  margin-right: 20px;
 }
-
 
 /* CAROUSEL HERO SECTION............................................... */
 /* .................................................................... */
 
 .hero-carousel {
-    position: relative;
-    width: 100%;
-    height: 100vh; /* Hauteur de la fenêtre */
-    overflow: hidden; /* Cache les slides qui ne sont pas visibles */
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Hauteur de la fenêtre */
+  overflow: hidden; /* Cache les slides qui ne sont pas visibles */
 }
 
 .carousel-container {
-    display: flex;
-    width: 400%; /* 4 slides * 100% */
-    height: 100%;
-    transition: transform 1.5s ease-in-out; /* Augmentation de la durée pour un effet plus smooth */
+  display: flex;
+  width: 400%; /* 4 slides * 100% */
+  height: 100%;
+  transition: transform 1.5s ease-in-out; /* Augmentation de la durée pour un effet plus smooth */
 }
-
-
 
 /* HERO SLIDE 1 PRESENTATION RESTAURANT.............................. */
 /* .................................................................. */
 
 .hero-slide {
-    width: 25%;
-    height: 100%;
-    flex-shrink: 0;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    background-color: rgba(0, 0, 0, 0.447);
-    background-blend-mode: darken;
-    border-bottom: 1px solid #d8000b;
+  width: 25%;
+  height: 100%;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.447);
+  background-blend-mode: darken;
+  border-bottom: 1px solid #d8000b;
 }
 
 .hero-page-1 {
-    background: url(.//PICTURES/Logo\ Food\ Portfolio.webp);
-    background-size: 10%;
-    background-position: center;
-    background-color: rgba(255, 255, 255, 0.816);
-    background-blend-mode: lighten;
-    display: flex;
+  background: url(.//PICTURES/Logo\ Food\ Portfolio.webp);
+  background-size: 10%;
+  background-position: center;
+  background-color: rgba(255, 255, 255, 0.816);
+  background-blend-mode: lighten;
+  display: flex;
 }
 
 .hero-slide-top {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-    padding-top: 100px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 100px;
 }
 
 .hero-slide-top h1 {
-    color: #d8000b;
-    font-size: 70px;
-    z-index: 2;
-    position: relative;
-    font-style: italic;
-    text-shadow: 0px 0px 1px #d8000b;
-    opacity: 0; 
-    animation-name: slideInFromLeft;
-    animation-duration: 0.8s;   /* Assez rapide */
-    animation-timing-function: ease-out;
-    animation-fill-mode: forwards; /* Garde l'état final (visible) */
+  color: #d8000b;
+  font-size: 70px;
+  z-index: 2;
+  position: relative;
+  font-style: italic;
+  text-shadow: 0px 0px 1px #d8000b;
+  opacity: 0;
+  animation-name: slideInFromLeft;
+  animation-duration: 0.8s; /* Assez rapide */
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards; /* Garde l'état final (visible) */
 }
 
 .hero-slide-top #action-h1 {
-    color: rgb(7, 40, 7);
-    font-size: 130px;
-    position: absolute;
-    top: 68%;
-    right: 0;
-    z-index: 1;
-    rotate: -5deg;
-    left: 55%;
-    text-transform: uppercase;
-    font-family: "Bangers", sans-serif;
-    letter-spacing: 5px;
-    background-color: white;
-    padding: 10px;
-    border: 2px solid rgb(7, 40, 7);
-    border-radius: 50%;
-    opacity: 0; 
-    animation:
-    slideInFromRight 1s ease-out forwards,
+  color: rgb(7, 40, 7);
+  font-size: 130px;
+  position: absolute;
+  top: 68%;
+  right: 0;
+  z-index: 1;
+  rotate: -5deg;
+  left: 55%;
+  text-transform: uppercase;
+  font-family: "Bangers", sans-serif;
+  letter-spacing: 5px;
+  background-color: white;
+  padding: 10px;
+  border: 2px solid rgb(7, 40, 7);
+  border-radius: 50%;
+  opacity: 0;
+  animation: slideInFromRight 1s ease-out forwards,
     glowingEffect 2s ease-in-out 2s infinite;
-    animation-timing-function: ease-out;
-    animation-delay: 0.2s;
-    animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+  animation-delay: 0.2s;
+  animation-fill-mode: forwards;
 }
 
 .hero-slide-top .stars {
-    position: relative;
-    top: 200px;
-    font-size: 40px;
-    color: #d8000bd7;
-    right: 2%;
-    z-index: 2;
+  position: relative;
+  top: 200px;
+  font-size: 40px;
+  color: #d8000bd7;
+  right: 2%;
+  z-index: 2;
 }
 .hero-slide-top .stars i {
-    padding: 0px;
-    opacity: 0;
-    animation: 
-    fadeInEffect 1s ease-out forwards;
+  padding: 0px;
+  opacity: 0;
+  animation: fadeInEffect 1s ease-out forwards;
 }
 
 /* HERO SLIDE BOTTOM..................................... */
 
 .hero-slide-bottom {
-    color: black;
-    position: relative;
-    right: 25%;
-    top: 2%; 
-    z-index: 9999;
+  color: black;
+  position: relative;
+  right: 25%;
+  top: 2%;
+  z-index: 9999;
 }
 
 .slide-bottom-item {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    opacity: 0;
-    animation-name: fadeInUp;
-    animation-duration: 0.6s; /* Durée de l'apparition */
-    animation-timing-function: ease-out;
-    animation-fill-mode: forwards;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  opacity: 0;
+  animation-name: fadeInUp;
+  animation-duration: 0.6s; /* Durée de l'apparition */
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
 }
 
 .slide-bottom-item:nth-child(1) {
@@ -250,31 +239,31 @@ main {
 }
 
 .slide-bottom-item:nth-child(2) {
-  animation-delay: 1.5s;   /* 2.5s + 0.5s de décalage */
+  animation-delay: 1.5s; /* 2.5s + 0.5s de décalage */
 }
 
 .slide-bottom-item:nth-child(3) {
-  animation-delay: 2s;   /* 3s + 0.5s de décalage */
+  animation-delay: 2s; /* 3s + 0.5s de décalage */
 }
 
 .slide-bottom-item p {
-    font-size: 20px;
-    letter-spacing: 2px;
+  font-size: 20px;
+  letter-spacing: 2px;
 }
 
 .slide-bottom-item i {
-    font-size: 20px;
-    color: rgb(8, 235, 8);
-    background-color: white;
-    border: 2px solid rgb(8, 235, 8);
-    padding: 10px;
-    border-radius: 50%;
-    box-shadow: 0px 0px 5px 0px rgb(8, 235, 8);
-    height: 50px;
-    width: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  font-size: 20px;
+  color: rgb(8, 235, 8);
+  background-color: white;
+  border: 2px solid rgb(8, 235, 8);
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 5px 0px rgb(8, 235, 8);
+  height: 50px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* HERO DEPTH.................................................. */
@@ -294,8 +283,7 @@ main {
   width: 150px;
   border: 2px solid #890006;
   border-radius: 50%;
-  animation: 
-  fadeInEffect 2s ease-out forwards;
+  animation: fadeInEffect 2s ease-out forwards;
   position: absolute;
   bottom: 43%;
   right: -175px;
@@ -309,7 +297,8 @@ main {
   font-size: 18px;
   box-shadow: 0px 0px 20px 0px #890006;
   border-radius: 10px;
-  animation: fadeInEffect 1.5s ease-out forwards, heartbeatEffect 1.5s ease-in-out 1.5s infinite;
+  animation: fadeInEffect 1.5s ease-out forwards,
+    heartbeatEffect 1.5s ease-in-out 1.5s infinite;
   position: absolute;
   bottom: -25px;
   left: 500px;
@@ -326,19 +315,39 @@ main {
 /* ........................................................................ */
 
 .hero-page-2 {
-    background: url(.//PICTURES/SandwichKbb.webp);
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
+  background: url(.//PICTURES/SandwichKbb.webp);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  padding: 0px auto;
+  background-color: rgba(0, 0, 0, 0.601);
+  background-blend-mode: darken;
 }
 
 .hero2-left-container {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-  }
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.flammes {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 50'%3E%3Cdefs%3E%3ClinearGradient id='degradeFlamme' x1='0%25' y1='0%25' x2='0%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23d8000b;' /%3E%3Cstop offset='100%25' style='stop-color:%23FF8C00;' /%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath fill='url(%23degradeFlamme )' stroke='black' stroke-width='0.3' d='m 27 24 C 28 26.6667 32 28 31 32 C 33 30.3333 35 33 37 27 C 38 34 45 28 49 40 L 38 40 L 0 40 C 3.3333 35 8 35 10 25 C 12.3333 28 8 34 15 33 C 17.6667 31.6667 16 30 19 27 C 20.3333 30.3333 21.6667 33.6667 23 32 C 24 30 21 32 26 26 Z'/%3E%3C/svg%3E");
+
+  /* --- Styles pour positionner l'image de fond --- */
+  background-repeat: no-repeat;
+  background-position: center center;
+  transform: rotate(174deg);
+  background-size: 100%;
+
+  /* --- Donnez une taille à votre div pour que le fond soit visible --- */
+  width: 1000px;
+  height: 400px;
+  position: absolute;
+  margin-left: 200px;
+  margin-top: 565px;
+}
 
 .hero2-left-container p {
   font-size: 25px;
@@ -348,44 +357,55 @@ main {
   bottom: 60px;
   left: 150px;
   letter-spacing: 2px;
+  z-index: 999;
 }
 
 .hero2-left-container h1 {
-
   font-size: 80px;
-
   font-family: "Bangers", sans-serif;
   letter-spacing: 10px;
   position: relative;
-
   margin-left: 100px;
-  background: linear-gradient(to top, orange, red); /* Dégradé du bas (orange) vers le haut (rouge) */
-    
-    /* ÉTAPE 2: Couper l'arrière-plan à la forme du texte */
-    -webkit-background-clip: text; /* Pour la compatibilité avec les navigateurs WebKit (Chrome, Safari) */
-    background-clip: text;
-    
-    /* ÉTAPE 3: Rendre la couleur du texte transparente */
-    color: transparent;
+  background: linear-gradient(
+    to top,
+    orange,
+    #df000b
+  ); /* Dégradé du bas (orange) vers le haut (rouge) */
+
+  /* ÉTAPE 2: Couper l'arrière-plan à la forme du texte */
+  -webkit-background-clip: text; /* Pour la compatibilité avec les navigateurs WebKit (Chrome, Safari) */
+  background-clip: text;
+
+  /* ÉTAPE 3: Rendre la couleur du texte transparente */
+  color: orangered;
+  z-index: 9999;
+  text-shadow: -1px -1px 0 #000, /* Ombre en haut à gauche */ 1px -1px 0 #000,
+    /* Ombre en haut à droite */ -6px 6px 0 #000,
+    /* Ombre en bas à gauche */ 1px 1px 0 #000; /* Ombre en bas à droite */
 }
 
 .hero2-effet-h1 {
-  color: #d8000b;
+  color: white;
   font-family: inherit;
   position: absolute;
-  font-size: 100px;
+  font-size: 120px;
   transform: rotate(-5deg);
   letter-spacing: 10px;
+  padding: 50px;
+  -webkit-text-stroke: 1px rgba(255, 68, 0, 0.918);
+  text-shadow: -1px -1px 0 #000, /* Ombre en haut à gauche */ 1px -1px 0 #000,
+    /* Ombre en haut à droite */ -6px 6px 0 #000,
+    /* Ombre en bas à gauche */ 1px 1px 0 #000; /* Ombre en bas à droite */
 }
 
 .hero2-middle-container {
-    display: flex;
-    flex-direction: column;
-    padding: 50px;
-    line-height: 1.6em;
-    background-color: rgba(57, 255, 47, 0.477);
-    position: absolute;
-    bottom: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+  line-height: 1.6em;
+  background-color: rgba(57, 255, 47, 0.477);
+  position: absolute;
+  bottom: 0;
 }
 
 .hero2-right-container {
@@ -397,62 +417,60 @@ main {
   bottom: 0;
 }
 
-
-
 /* HERO PAGE 3...LES INGREDIENTS........................................... */
 /* ........................................................................ */
 
 .hero-page-3 {
-    background: url(.//PICTURES/Menthe1.webp);
-    background-size: cover;
-    background-position: center;
+  background: url(.//PICTURES/Menthe1.webp);
+  background-size: cover;
+  background-position: center;
 }
 
 .hero-page-4 {
-    background: url(.//PICTURES/SaladBig.webp);
-    background-size: cover;
-    background-position: center;
+  background: url(.//PICTURES/SaladBig.webp);
+  background-size: cover;
+  background-position: center;
 }
 
 /* FLECHES CAROUSEL.................................. */
 
 .carousel-button {
-    position: absolute;
-    top: 60%;
-    transform: translateY(-50%);
-    z-index: 10;
-    background-color: white;
-    color: black;
-    border: 2px solid black;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 20px;
-    cursor: pointer;
-    opacity: 0;
-    transition: opacity 0.3s ease, transform 0.3s ease;
+  position: absolute;
+  top: 60%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .prev-button {
-    left: 30px;
+  left: 30px;
 }
 
 .next-button {
-    right: 30px;
+  right: 30px;
 }
 
 .hero-carousel:hover .carousel-button {
-    opacity: 1;
+  opacity: 1;
 }
 
 .carousel-button:hover {
-    transform: translateY(-50%) scale(1.1);
-    box-shadow: 0 0 10px #890006;
-    color: #d8000b;
-    border-color: #d8000b;
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 0 10px #890006;
+  color: #d8000b;
+  border-color: #d8000b;
 }
 
 /* KEYFRAMES......................................... */
@@ -471,10 +489,10 @@ main {
   }
 }
 
-
 /* 2. Définir l'animation de pulsation (heartbeat) */
 @keyframes heartbeatEffect {
-  0%, 100% {
+  0%,
+  100% {
     transform: scale(1); /* Taille normale */
   }
   50% {
@@ -486,7 +504,9 @@ main {
 
 @keyframes slideInFromLeft {
   from {
-    transform: translateX(-100%); /* Commence complètement à gauche, hors de l'écran */
+    transform: translateX(
+      -100%
+    ); /* Commence complètement à gauche, hors de l'écran */
     opacity: 0;
   }
   to {
@@ -498,7 +518,9 @@ main {
 /* 2. Définir l'animation pour "Bodrum" (droite -> centre) */
 @keyframes slideInFromRight {
   from {
-    transform: translateX(100%); /* Commence complètement à droite, hors de l'écran */
+    transform: translateX(
+      100%
+    ); /* Commence complètement à droite, hors de l'écran */
     opacity: 0;
   }
   to {
@@ -508,14 +530,15 @@ main {
 }
 
 @keyframes glowingEffect {
-  0%, 100% {
+  0%,
+  100% {
     /* Pas de lueur au début et à la fin du cycle */
-    text-shadow: none; 
+    text-shadow: none;
   }
   50% {
     /* Lueur maximale au milieu du cycle */
     /* Syntaxe: décalage-x | décalage-y | flou | couleur */
-    text-shadow: 0 0 1px rgb(7, 40, 7); 
+    text-shadow: 0 0 1px rgb(7, 40, 7);
   }
 }
 
