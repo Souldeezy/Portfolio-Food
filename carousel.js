@@ -1,61 +1,61 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Sélection des éléments du DOM
     const carousel = document.querySelector('.carousel-container');
     const slides = document.querySelectorAll('.hero-slide');
-    const prevButton = document.querySelector('.prev-button'); // Ajout
-    const nextButton = document.querySelector('.next-button'); // Ajout
-    
-    const slideInterval = 100000; // 10 secondes
+    const prevButton = document.querySelector('.prev-button');
+    const nextButton = document.querySelector('.next-button');
+    const slideInterval = 1000000; // 10 secondes
+
     let currentSlide = 0;
     let autoSlideTimer;
 
-    // 1. Fonction pour afficher une diapositive spécifique
+    // --- FONCTION goToSlide AMÉLIORÉE ---
     function goToSlide(index) {
-        // Logique de boucle pour la navigation
+        // Logique de boucle pour le carrousel
         if (index >= slides.length) {
-            index = 0; // Si on dépasse la fin, on revient au début
+            index = 0;
         }
         if (index < 0) {
-            index = slides.length - 1; // Si on va avant le début, on va à la fin
+            index = slides.length - 1;
         }
 
-        // Calculer la translation pour afficher la diapositive
-        const offset = -index * (100 / slides.length); // Calcul dynamique (100 / 4 = 25%)
+        // Déplacer le carrousel
+        const offset = -index * (100 / slides.length);
         carousel.style.transform = `translateX(${offset}%)`;
+
+        // --- C'EST LA PARTIE LA PLUS IMPORTANTE ---
+        // 1. Retirer la classe .is-active de tous les slides
+        slides.forEach(slide => {
+            slide.classList.remove('is-active');
+        });
+
+        // 2. Ajouter la classe .is-active uniquement au slide actuel
+        slides[index].classList.add('is-active');
+        // -----------------------------------------
 
         currentSlide = index;
     }
 
-    // 2. Fonctions pour la navigation manuelle
-    function slideNext() {
-        goToSlide(currentSlide + 1);
-    }
-
-    function slidePrev() {
-        goToSlide(currentSlide - 1);
-    }
-
-    // 3. Logique de défilement automatique et réinitialisation
-    function resetTimer() {
-        clearInterval(autoSlideTimer); // Arrête le minuteur actuel
-        startTimer(); // Redémarre un nouveau minuteur
-    }
-
+    // --- GESTION DU TIMER ---
     function startTimer() {
-        autoSlideTimer = setInterval(slideNext, slideInterval);
+        // On s'assure de ne pas avoir plusieurs timers en même temps
+        clearInterval(autoSlideTimer); 
+        autoSlideTimer = setInterval(() => {
+            goToSlide(currentSlide + 1);
+        }, slideInterval);
     }
 
-    // 4. Ajout des écouteurs d'événements sur les flèches
+    // --- GESTION DES CLICS SUR LES FLÈCHES ---
     nextButton.addEventListener('click', () => {
-        slideNext();
-        resetTimer(); // Réinitialise le minuteur après un clic
+        goToSlide(currentSlide + 1);
+        startTimer(); // On redémarre le timer après un clic manuel
     });
 
     prevButton.addEventListener('click', () => {
-        slidePrev();
-        resetTimer(); // Réinitialise le minuteur après un clic
+        goToSlide(currentSlide - 1);
+        startTimer(); // On redémarre le timer après un clic manuel
     });
 
-    // Démarrer le carrousel au chargement de la page
+    // --- DÉMARRAGE INITIAL ---
+    goToSlide(0); // On active le premier slide au chargement
     startTimer();
 });

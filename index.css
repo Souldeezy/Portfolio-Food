@@ -125,7 +125,7 @@ main {
   display: flex;
   width: 400%; /* 4 slides * 100% */
   height: 100%;
-  transition: transform 1.5s ease-in-out; /* Augmentation de la durée pour un effet plus smooth */
+  transition: transform 0.6s ease-in-out; /* Augmentation de la durée pour un effet plus smooth */
 }
 
 /* HERO SLIDE 1 PRESENTATION RESTAURANT.............................. */
@@ -163,7 +163,7 @@ main {
 
 .hero-slide-top h1 {
   color: #d8000b;
-  font-size: 70px;
+  font-size: 50px;
   z-index: 2;
   position: relative;
   font-style: italic;
@@ -249,6 +249,7 @@ main {
 .slide-bottom-item p {
   font-size: 20px;
   letter-spacing: 2px;
+  font-family: "Bangers", sans-serif;
 }
 
 .slide-bottom-item i {
@@ -317,19 +318,27 @@ main {
 .hero-page-2 {
   background: url(.//PICTURES/SandwichKbb.webp);
   background-size: cover;
-  background-position: center;
+  background-position: 30% 55%;
   display: flex;
   flex-direction: row;
   justify-content: start;
   padding: 0px auto;
   background-color: rgba(0, 0, 0, 0.601);
   background-blend-mode: darken;
+
+  
 }
+
 
 .hero2-left-container {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  opacity: 0;
+}
+
+.hero-page-2.is-active .hero2-left-container {
+  animation: fadeInEffect 2s ease-in-out 0s forwards;
 }
 
 .flammes {
@@ -398,23 +407,196 @@ main {
     /* Ombre en bas à gauche */ 1px 1px 0 #000; /* Ombre en bas à droite */
 }
 
+
+
+/* MIDDLE CONTAINER LISTE INGREDIENTS............................................. */
+
 .hero2-middle-container {
   display: flex;
   flex-direction: column;
-  padding: 50px;
-  line-height: 1.6em;
-  background-color: rgba(57, 255, 47, 0.477);
+  padding: 20px;
   position: absolute;
-  bottom: 0;
+  bottom: 7%;
+  justify-content: start;
+  margin-left: 100px;
+  width: 600px;
+  height: 250px;
+  gap: 14px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
+
+.hero2-middle-container p {
+  /* Vos styles existants */
+  font-size: 18px;
+  margin: 0;
+  position: relative;
+  margin-left: 170px;
+  color: white;
+  font-weight: bold;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -2px 2px 0 #000,
+    1px 1px 0 #000;
+
+  /* On les rend juste invisibles, SANS lancer l'animation ici */
+  opacity: 0;
+}
+
+/* 2. L'animation ne se lance QUE SI le slide parent a la classe .is-active */
+.hero-page-2.is-active .hero2-middle-container p {
+  animation-name: fadeInUp;
+  animation-duration: 0.6s;
+  animation-fill-mode: forwards;
+}
+
+/* 3. On définit les délais, toujours avec la condition .is-active */
+.hero-page-2.is-active .hero2-middle-container p:nth-child(1) {
+  animation-delay: 1s;
+}
+.hero-page-2.is-active .hero2-middle-container p:nth-child(2) {
+  animation-delay: 1.3s;
+}
+.hero-page-2.is-active .hero2-middle-container p:nth-child(3) {
+  animation-delay: 1.6s;
+}
+.hero-page-2.is-active .hero2-middle-container p:nth-child(4) {
+  animation-delay: 1.9s;
+}
+.hero-page-2.is-active .hero2-middle-container p:nth-child(5) {
+  animation-delay: 2.2s;
+}
+.hero-page-2.is-active .hero2-middle-container p:nth-child(6) {
+  animation-delay: 2.5s;
+}
+.hero-page-2.is-active .hero2-middle-container p:nth-child(7) {
+  animation-delay: 2.8s;
+}
+
+/* HERO2RIGHT CONTAINER PRIX ET SUPPLEMENTS................................ */
 
 .hero2-right-container {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: aqua;
+  flex-direction: column;
   position: absolute;
-  bottom: 0;
+  left: 45%;
+  gap: 10px;
+  height: 60%;
+  margin-top: 130px;
+  width: 300px;
+}
+
+.hero2-right-container .prix-title {
+  font-family: "Bangers", sans-serif;
+  font-size: 35px;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -2px 2px 0 #000,
+    1px 1px 0 #000;
+    color: white;
+    letter-spacing: 2px;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 6px;
+    opacity: 0;
+}
+
+.hero-page-2.is-active .hero2-right-container .prix-title {
+  animation: fadeInUp 1s ease-out 2s forwards;
+}
+
+.hero2-right-container .prix {
+  height: 170px;
+    width: 170px;
+    position: absolute;  
+    margin-top: 100px;
+    margin-left: 30px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 50%;
+    border: 1px solid black;
+    box-shadow: 0px 0px 20px 0px rgb(136, 252, 136);
+    opacity: 0;
+    
+    /* On ajoute flexbox pour centrer facilement */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Style pour le PRIX (7,50€) */
+.hero2-right-container .prix p {
+    font-family: "Bangers", sans-serif;
+    font-size: 45px;
+    color: rgb(19, 186, 19);
+    letter-spacing: 5px; 
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -2px 2px 0 #000, 1px 1px 0 #000;
+    margin: 0; /* On enlève les marges par défaut */
+}
+
+/* Style SPÉCIFIQUE pour le détail "Seul" */
+.hero2-right-container .prix .detail-prix, .hero2-right-container .prix2 .detail-prix {
+    /* On annule et remplace les styles hérités */
+    font-family: "Lato", sans-serif; /* On remet la police normale */
+    font-size: 20px;                 /* Une taille de police plus petite */
+    color: black;
+    letter-spacing: normal;          /* Espacement normal */
+    text-shadow: none;               /* On enlève l'ombre du texte */
+    font-style: bold;              /* On le met en gras */
+    margin-top: 5px;               /* On le rapproche un peu du prix */
+    margin-left: 15px;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
+    text-decoration-color: rgb(56, 56, 56);
+}
+
+/* L'animation ne s'applique qu'à la div .prix principale */
+.hero-page-2.is-active .hero2-right-container .prix {
+    
+    animation: slideInFromRight 1s ease-out 1.5s forwards,
+    
+    /* Animation 2: Effet ellipse (lueur pulsante) */
+               ellipseEffect 3s ease-in-out 1s infinite;
+}
+
+.hero2-right-container .prix2 {
+    height: 170px;
+    width: 170px;
+    position: absolute;  
+    bottom: -50px;
+    margin-left: 30px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 50%;
+    border: 1px solid black;
+    box-shadow: 0px 0px 20px 0px rgb(136, 252, 136);
+    opacity: 0;
+    
+    /* On ajoute flexbox pour centrer facilement */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Style pour le PRIX (7,50€) */
+.hero2-right-container .prix2 p {
+    font-family: "Bangers", sans-serif;
+    font-size: 45px;
+    color: rgb(19, 186, 19);
+    letter-spacing: 5px; 
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -2px 2px 0 #000, 1px 1px 0 #000;
+    margin: 0; /* On enlève les marges par défaut */
+}
+
+
+
+/* L'animation ne s'applique qu'à la div .prix principale */
+.hero-page-2.is-active .hero2-right-container .prix2 {
+    
+    animation: slideInFromRight 1s ease-out 1.7s forwards,
+    
+    /* Animation 2: Effet ellipse (démarre un peu après) */
+               ellipseEffect 3s ease-in-out 1s infinite;
 }
 
 /* HERO PAGE 3...LES INGREDIENTS........................................... */
@@ -427,9 +609,10 @@ main {
 }
 
 .hero-page-4 {
-  background: url(.//PICTURES/SaladBig.webp);
-  background-size: cover;
-  background-position: center;
+  background: url(.//BonéKebab1.jpg);
+  background-size: 140%;
+  background-position-x: 40%;
+  background-position-y: 20%;
 }
 
 /* FLECHES CAROUSEL.................................. */
@@ -554,3 +737,18 @@ main {
     transform: translateY(0); /* Arrive à sa position finale */
   }
 }
+
+/* ELLIPSE EFFECT.................................................. */
+
+@keyframes ellipseEffect {
+  /* L'état de départ et de fin : une lueur discrète */
+  0%, 100% {
+    box-shadow: 0 0 10px 0px rgb(136, 252, 136);
+  }
+  
+  /* L'état au milieu de l'animation : une lueur intense et large */
+  50% {
+    box-shadow: 0 0 20px 0px rgb(136, 252, 136);
+  }
+}
+
